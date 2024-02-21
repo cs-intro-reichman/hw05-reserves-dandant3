@@ -144,7 +144,7 @@ public class GameOfLife {
 					if (j == arr[0].length - 2) { 
 						System.out.println();
 					}
-					System.out.print( " "); 
+					System.out.print( "  "); 
 				}
 
 		}
