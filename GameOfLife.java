@@ -137,15 +137,28 @@ public class GameOfLife {
 	}
 	
 	// Prints the board. Alive and dead cells are printed as 1 and 0, respectively.
-    public static void print(int[][] arr) {
-		for (int i = 1; i < arr.length  - 1; i++) {
+   // public static void print(int[][] arr) {
+	//	for (int i = 1; i < arr.length  - 1; i++) {
+	//		for (int j = 1; j < arr[0].length - 1; j++) {
+	//			System.out.printf("%d  ", arr[i][j]);
+	//		}
+	//		System.out.println();
+	//	}
+	//}
+	public static void print(int[][] arr) {
+		for (int i = 1; i < arr.length - 1; i++) {
 			for (int j = 1; j < arr[0].length - 1; j++) {
-				System.out.printf("%d  ", arr[i][j]);
+				// Print each cell value followed by a double space, except for the last cell in a row.
+				if (j < arr[0].length - 2) {
+					System.out.printf("%d  ", arr[i][j]); // Two spaces after %d for double spacing
+				} else {
+					// For the last cell in a row, print without the extra space at the end.
+					System.out.printf("%d", arr[i][j]);
+				}
 			}
-			System.out.println();
+			System.out.println(); // Move to the next line after printing each row
 		}
-	}
-		
+	}	
     // Displays the board. Living and dead cells are represented by black and white squares, respectively.
     // We use a fixed-size canvas of 900 pixels by 900 pixels for displaying game boards of different sizes.
     // In order to handle any given board size, we scale the X and Y dimensions according to the board size.
