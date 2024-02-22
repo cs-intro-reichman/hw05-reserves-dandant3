@@ -152,7 +152,7 @@ public class GameOfLife {
 		public static void printevole(int[][] arr) {
 				for (int i = 1; i < arr.length - 1; i++) {
 					for (int j = 1; j < arr[0].length - 1; j++) {
-						System.out.printf(" %d", arr[i][j]); // Added two spaces before %d
+						System.out.printf("  %d", arr[i][j]); // Added two spaces before %d
 					}
 					System.out.println();
 				}
